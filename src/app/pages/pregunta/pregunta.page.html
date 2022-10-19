@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Pregunta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding-vertical">
+    <!--
+      Se establece un card que contendrá un título
+      y un contenido
+    -->
+    <ion-card-title class="ion-text-center">
+      <ion-label>
+        <h2>Validacion para recuperar contraseña</h2>
+      </ion-label>
+    </ion-card-title>
+
+    <ion-card class="ion-text-center ion-padding-vertical">
+
+      <ion-card-title class="ion-text-center">
+        <ion-label>
+          <h1>Paso 2: Responder la pregunta Secreta</h1>
+          <br>
+          <h2>{{ usuario.nombre }}</h2>          
+          <h2>{{ usuario.preguntaSecreta }}</h2>
+        </ion-label>
+      </ion-card-title>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Ingrese respuesta:</ion-label>
+          <!-- Usamos ngModel para indicarle al input con que propiedad del controlador va a trabajar -->
+          <ion-input type="text" [(ngModel)]="respuesta"></ion-input>
+        </ion-item>
+        
+        <ion-row>
+          <ion-col size="12">
+            <!-- 
+              Para usar un método de la clase controladora, hay que escribir el evento del control entre paréntesis y luego
+              indicar cual es el método a ejecutar; en este caso se trata de ingresar()
+            -->
+            <ion-button shape="block" (click)="ValidarRespuestaSecreta()">
+              Recuperar Contraseña
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+      
+      <ion-label>
+        <ion-button (click)="volverAlInicio()" expand="block" fill="clear" shape="round">
+          Volver Al Inicio
+        </ion-button>
+      </ion-label>
+    </ion-card>
+  </div>
+  
+</ion-content>

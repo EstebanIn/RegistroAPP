@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Respuesta Correcta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="ion-text-center ion-padding-vertical">
+    <img src="../../../assets/icon/happy1.png" alt="block">
+    <ion-card-content>
+      <ion-card-title>
+        {{ usuario.nombre }}
+      </ion-card-title>
+      <ion-label>
+        <h2>Tu Respuesta es Correcta</h2>
+        <h2>Tu contraseña es la siguente:</h2>
+        <br>
+        <h2>{{ usuario.password }}</h2>
+      </ion-label>      
+    </ion-card-content>
+    <ion-button (click)="volverAlInicio()" expand="block" fill="clear" shape="round">
+      Volver Al Inicio
+    </ion-button>
+  </ion-card>
+    
+</ion-content>

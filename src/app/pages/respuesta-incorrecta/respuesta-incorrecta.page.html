@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Respuesta Incorrecta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="ion-text-center ion-padding-vertical">
+    <img src="../../../assets/icon/sadcat2.gif" alt="">
+    <ion-card-content>
+      <ion-card-title>
+        {{ usuario.nombre }}
+      </ion-card-title>
+      <h2>Tu Respuesta es Incorrecta</h2>
+      <h2>intentalo nuevamente</h2>
+    </ion-card-content>
+    <ion-button (click)="volverAlInicio()" expand="block" fill="clear" shape="round">
+      Volver Al Inicio
+    </ion-button>
+  </ion-card>
+
+</ion-content>
